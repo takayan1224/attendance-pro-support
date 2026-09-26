@@ -1,0 +1,73 @@
+:root {
+  --bg: #f2f4f8;
+  --card: #ffffff;
+  --ink: #0b1540;
+  --sub: #5b6472;
+  --line: #e3e7ee;
+  --brand: #1f5bd8;
+  --brand-deep: #173f9e;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b0d12;
+    --card: #181c24;
+    --ink: #eef1f7;
+    --sub: #9aa3b2;
+    --line: #2a303b;
+    --brand: #4c8dff;
+    --brand-deep: #2a5fd0;
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", Meiryo, sans-serif;
+  line-height: 1.8;
+  -webkit-text-size-adjust: 100%;
+}
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 20px 64px; }
+.hero {
+  background: linear-gradient(135deg, #2563eb, #173f9e 60%, #4b22b8);
+  color: #fff;
+  padding: 56px 20px 64px;
+  text-align: center;
+}
+.hero img { width: 104px; height: 104px; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,.3); }
+.hero h1 { margin: 18px 0 6px; font-size: 30px; letter-spacing: .02em; }
+.hero p { margin: 0; opacity: .9; }
+nav { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 22px; }
+nav a {
+  color: #fff; text-decoration: none; font-size: 14px; font-weight: 600;
+  padding: 8px 16px; border-radius: 999px; background: rgba(255,255,255,.16);
+  border: 1px solid rgba(255,255,255,.3);
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 24px 24px 20px;
+  margin-top: 20px;
+  box-shadow: 0 3px 10px rgba(0,0,0,.04);
+}
+.wrap > .card:first-child { margin-top: -32px; position: relative; }
+h2 { font-size: 20px; margin: 0 0 10px; }
+h3 { font-size: 16px; margin: 20px 0 4px; }
+p, li { color: var(--ink); }
+.sub { color: var(--sub); font-size: 14px; }
+ul, ol { padding-left: 1.3em; margin: 6px 0; }
+details { border-top: 1px solid var(--line); padding: 12px 0; }
+details:first-of-type { border-top: 0; }
+summary { cursor: pointer; font-weight: 700; list-style: none; }
+summary::-webkit-details-marker { display: none; }
+summary::before { content: "Q. "; color: var(--brand); }
+details p { margin: 8px 0 0; }
+.contact {
+  display: inline-block; margin-top: 8px; font-size: 18px; font-weight: 700;
+  color: var(--brand); text-decoration: none; word-break: break-all;
+}
+footer { text-align: center; color: var(--sub); font-size: 13px; margin-top: 36px; }
+footer a { color: var(--sub); }
